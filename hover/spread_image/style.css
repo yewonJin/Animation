@@ -1,0 +1,92 @@
+@keyframes fadein {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from{
+        opacity: 1;
+    }to{
+        opacity: 0;
+    }
+}
+
+.container{
+    width: 800px;
+    height: 400px;
+    margin: 0px auto;
+}
+
+.container > .board{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 1px solid grey;
+
+}
+
+.container > .board > .card{
+    height: 100%;
+    transition: all 1s;
+    flex-grow: 1;
+}
+
+.container > .board > .card > h1{
+    position: relative;
+    margin: 20px 0px 0px 20px;
+    color: white;
+    display: inline-block;
+}
+
+.container > .board > .card:hover{
+    transition: all 1s;
+    flex-grow: 1.5;
+}
+
+.container > .board > .card > .section_content{ 
+    color: white;
+    box-sizing: border-box;
+    display: none;
+    padding: 20px;
+}
+
+.container > .board > .card.active > .section_content{
+    position: absolute;
+    animation: fadein 1s;
+    top: 10px;
+    width: 800px;
+    height: 400px;
+    display: block;
+}
+
+.container > .board > .card.active > .section_content > .btn{
+    position: relative;
+    bottom: 5px;
+    margin-left: 110px;
+}
+
+
+.container > .board > :nth-child(1) {
+    background-image: url(./images/1.jpg);
+    background-position: -200px;
+}
+
+.container > .board > :nth-child(2) {
+    background-image: url(./images/2.jpg);
+    background-position: -300px;
+    background-repeat: no-repeat;
+}
+
+.container > .board > :nth-child(3) {
+    background-image: url(./images/3.jpg);
+    background-position: 0px;
+}
+
+.container > .board > :nth-child(4) {
+    background-image: url(./images/4.png);
+    background-position: -100px;
+}
+

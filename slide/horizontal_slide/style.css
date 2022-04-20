@@ -1,0 +1,73 @@
+body > div{
+    display: flex;
+    width: 600px;
+    margin: 0px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+}
+
+.container > .board {
+    position: relative;
+    transition: all 1.5s ease-out;
+    margin: 0px;
+    height: 400px;
+}
+
+.container > .board > div{
+    box-sizing: border-box;
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid grey;
+}
+
+.btn{
+    position: relative;
+    width: 30px;
+    height: 400px;
+}
+
+.back{
+    top: 8px;
+    right: 10px;
+}
+
+.back::after{
+    cursor: pointer;
+    position: absolute;
+    left: 7px;
+    top: 150px;
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    transform: rotate(225deg);
+}
+
+.next{
+    top: 8px;
+    left: 10px;
+}
+
+.next::after{
+    cursor: pointer;
+    position: absolute;
+    right: 7px;
+    top: 150px;
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    transform: rotate(45deg);
+}

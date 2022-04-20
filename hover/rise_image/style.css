@@ -1,0 +1,44 @@
+@keyframes fadein {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+.container{
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 800px;
+    height: 300px;
+    margin: 0px auto;
+}
+
+.container > div{
+    position: relative;
+    width: 30%;
+    height: 90%;
+    border: 1px solid black;
+}
+
+.container > div:hover .content{
+    transition: all 1.2s;
+    transform: translateY(-150px);
+}
+
+.container > div:hover .content > p{
+    animation: fadein 1.5s;
+}
+
+.container > div > .content{
+    position: absolute;
+    text-align: center;
+    width: 240px;
+    top: 200px;
+}
+
+.container > div > .content > h2{
+    margin-bottom: 30px;
+}
